@@ -33,21 +33,32 @@ das etiquetas dos produtos da linha própria.
 
 | Token | Hex | Origem |
 |---|---|---|
-| `--tinta` | `#2B211B` | espresso dominante das fotos |
+| `--tinta` | `#241C17` | espresso dominante das fotos |
+| `--tinta-70` | `#55453A` | corpo de texto — 7,2:1 sobre o papel |
+| `--tinta-45` | `#665545` | legendas — 5,6:1 |
 | `--ouro` | `#C2A066` | tampa dourada dos frascos da linha dela |
 | `--ouro-med` | `#A8894F` | monograma na porta de vidro |
-| `--ouro-txt` | `#7A6036` | variante para texto pequeno (5,15:1 sobre o creme) |
-| `--creme` | `#F3EDE4` | papel |
-| `--nude` / `--nude-claro` | `#E0B599` / `#ECC6B0` | parede da sala de atendimento |
-| `--argila` | `#7C442A` | terracota queimada das paredes |
+| `--ouro-txt` | `#705831` | ouro só para texto pequeno — 5,3:1 |
+| `--creme` / `--creme-2` | `#EDE3D5` / `#E2D6C4` | papel e faixa alternada |
+| `--nude` / `--nude-claro` | `#E0B599` / `#E3BCA1` | parede da sala de atendimento |
+| `--argila` | `#6E3B23` | terracota queimada das paredes |
 
-## Pendência conhecida
+Os tons de texto foram fechados depois do primeiro deploy: o papel original (`#F3EDE4`) tinha
+brilho demais e as legendas davam 3,2:1, reprovando no AA. O corpo também saiu de Jost 300
+para 400 — o peso leve sumia sobre fundo claro.
 
-**Depoimentos** (`#depoimentos`): os três cards estão marcados como `e-placeholder`.
-A pasta de imagens não trazia print de nenhuma avaliação real e depoimento de paciente não
-se inventa. Para publicar: trocar o texto de `.carta__txt` / `.carta__autor` pelo conteúdo
-real (Google ou Instagram) e **remover a classe `e-placeholder`** do `<article>` — o aviso
-some sozinho. O bloco de nota do Google (5,0 · 8 avaliações) acima deles já é real.
+## Depoimentos
+
+As três avaliações em `#depoimentos` são **reais**, transcritas dos prints do Google que estão
+em `img/depoimentos/` — Naira Daiany (Local Guide), Neiva Campos Aragon e Jéssica Lara.
+Cada carta linka o print original como comprovação, e os avatares foram recortados dos próprios
+prints (a Neiva tem avatar de letra no Google, então virou um círculo com a inicial em CSS).
+
+O texto foi transcrito em vez de exibir o print direto porque um print de ~470px de largura
+vira letra de 10px num card de celular. O print continua acessível pelo link.
+
+Para acrescentar mais avaliações: duplicar um `<article class="carta">`, transcrever o texto,
+salvar o print em `img/depoimentos/` e apontar o `.carta__print` para ele.
 
 ## Imagens
 

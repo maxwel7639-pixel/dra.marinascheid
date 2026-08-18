@@ -49,16 +49,18 @@ para 400 — o peso leve sumia sobre fundo claro.
 
 ## Depoimentos
 
-As três avaliações em `#depoimentos` são **reais**, transcritas dos prints do Google que estão
-em `img/depoimentos/` — Naira Daiany (Local Guide), Neiva Campos Aragon e Jéssica Lara.
-Cada carta linka o print original como comprovação, e os avatares foram recortados dos próprios
-prints (a Neiva tem avatar de letra no Google, então virou um círculo com a inicial em CSS).
+A seção mostra os **prints das avaliações reais do Google**, em `img/depoimentos/` — Naira Daiany
+(Local Guide), Neiva Campos Aragon e Jéssica Lara. Cada print fica numa placa branca (o screenshot
+tem fundo branco e flutuaria solto sobre o papel creme) e abre em tamanho original ao clicar.
 
-O texto foi transcrito em vez de exibir o print direto porque um print de ~470px de largura
-vira letra de 10px num card de celular. O print continua acessível pelo link.
+O `alt` de cada imagem carrega a transcrição completa da avaliação — imagem de texto precisa disso
+para leitor de tela e para a busca entender o conteúdo.
 
-Para acrescentar mais avaliações: duplicar um `<article class="carta">`, transcrever o texto,
-salvar o print em `img/depoimentos/` e apontar o `.carta__print` para ele.
+Os prints têm ~460–485px de largura nativa e são exibidos em card de ~350px no celular, então
+reduzem em vez de ampliar e continuam nítidos.
+
+Para acrescentar mais: salvar o print em `img/depoimentos/`, duplicar um `<figure class="print">`
+e escrever o `alt` com a transcrição.
 
 ## Imagens
 
